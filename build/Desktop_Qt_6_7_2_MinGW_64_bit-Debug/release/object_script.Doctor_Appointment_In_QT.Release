@@ -1,0 +1,12 @@
+release/main.o
+release/mainwindow.o
+release/booking.o
+release/cancellation.o
+release/availableslots.o
+release/records.o
+release/mydb.o
+release/moc_mainwindow.o
+release/moc_booking.o
+release/moc_cancellation.o
+release/moc_availableslots.o
+release/moc_records.o

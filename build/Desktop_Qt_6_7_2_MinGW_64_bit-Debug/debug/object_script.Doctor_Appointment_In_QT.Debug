@@ -1,0 +1,12 @@
+debug/main.o
+debug/mainwindow.o
+debug/booking.o
+debug/cancellation.o
+debug/availableslots.o
+debug/records.o
+debug/mydb.o
+debug/moc_mainwindow.o
+debug/moc_booking.o
+debug/moc_cancellation.o
+debug/moc_availableslots.o
+debug/moc_records.o
