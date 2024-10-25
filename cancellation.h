@@ -15,7 +15,7 @@ class Cancellation : public QDialog
 public:
     explicit Cancellation(QWidget *parent = nullptr);
     ~Cancellation();
-    void populateData();
+
 
 private slots:
     void on_btnBook_clicked();

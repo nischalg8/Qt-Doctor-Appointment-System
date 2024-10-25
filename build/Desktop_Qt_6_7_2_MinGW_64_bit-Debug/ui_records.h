@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
@@ -21,16 +22,20 @@ class Ui_Records
 {
 public:
     QTableView *tableView;
+    QLabel *lblinfo;
 
     void setupUi(QDialog *Records)
     {
         if (Records->objectName().isEmpty())
             Records->setObjectName("Records");
-        Records->setWindowModality(Qt::WindowModal);
-        Records->resize(320, 240);
+        Records->setWindowModality(Qt::WindowModality::WindowModal);
+        Records->resize(320, 305);
         tableView = new QTableView(Records);
         tableView->setObjectName("tableView");
         tableView->setGeometry(QRect(0, 0, 321, 231));
+        lblinfo = new QLabel(Records);
+        lblinfo->setObjectName("lblinfo");
+        lblinfo->setGeometry(QRect(30, 270, 241, 20));
 
         retranslateUi(Records);
 
@@ -40,6 +45,7 @@ public:
     void retranslateUi(QDialog *Records)
     {
         Records->setWindowTitle(QCoreApplication::translate("Records", "Records", nullptr));
+        lblinfo->setText(QCoreApplication::translate("Records", "TextLabel", nullptr));
     } // retranslateUi
 
 };

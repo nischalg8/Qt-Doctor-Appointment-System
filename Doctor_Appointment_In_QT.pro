@@ -25,27 +25,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
     booking.cpp \
     cancellation.cpp \
-    availableslots.cpp \
     records.cpp \
     mydb.cpp
 
 HEADERS += \
-        mainwindow.h \
+     mainwindow.h \
     booking.h \
     cancellation.h \
-    availableslots.h \
     records.h \
     mydb.h
 
 FORMS += \
-        mainwindow.ui \
+     mainwindow.ui \
     booking.ui \
     cancellation.ui \
-    availableslots.ui \
     records.ui
 
 # Default rules for deployment.

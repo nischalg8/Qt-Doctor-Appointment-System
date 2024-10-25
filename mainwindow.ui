@@ -6,32 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>758</width>
+    <height>438</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Doctor Appointment 1.0</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>260</y>
-      <width>161</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Project By CppBuzz.com</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnBooking">
     <property name="geometry">
      <rect>

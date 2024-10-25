@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -23,7 +22,6 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QLabel *label;
     QPushButton *btnBooking;
     QPushButton *btnCancellation;
     QPushButton *btnAvailableSlots;
@@ -34,15 +32,9 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(400, 300);
+        MainWindow->resize(758, 438);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName("centralWidget");
-        label = new QLabel(centralWidget);
-        label->setObjectName("label");
-        label->setGeometry(QRect(130, 260, 161, 16));
-        QFont font;
-        font.setPointSize(10);
-        label->setFont(font);
         btnBooking = new QPushButton(centralWidget);
         btnBooking->setObjectName("btnBooking");
         btnBooking->setGeometry(QRect(10, 10, 75, 61));
@@ -68,7 +60,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Doctor Appointment 1.0", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Project By CppBuzz.com", nullptr));
         btnBooking->setText(QCoreApplication::translate("MainWindow", "Booking", nullptr));
         btnCancellation->setText(QCoreApplication::translate("MainWindow", "Cancellation", nullptr));
         btnAvailableSlots->setText(QCoreApplication::translate("MainWindow", "Available\n"

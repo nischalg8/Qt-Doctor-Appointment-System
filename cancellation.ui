@@ -3,7 +3,7 @@
  <class>Cancellation</class>
  <widget class="QDialog" name="Cancellation">
   <property name="windowModality">
-   <enum>Qt::WindowModal</enum>
+   <enum>Qt::WindowModality::WindowModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -34,21 +34,6 @@
     <string>CANCEL</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="cmbSlot">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>10</y>
-     <width>111</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
@@ -65,24 +50,6 @@
    </property>
    <property name="text">
     <string>Token No</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>10</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Select Slot</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="txtTokenNo">

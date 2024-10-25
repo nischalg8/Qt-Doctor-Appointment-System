@@ -5,83 +5,85 @@
 
 Booking::Booking(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Booking)
-{
+    ui(new Ui::Booking) {
     ui->setupUi(this);
+    // Set minimum and maximum date-time in the QDateTimeEdit widget
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+    QDate currentDate = currentDateTime.date();
+    QTime minTime(8, 0); // 8 am
+    QTime maxTime(19, 0); // 7 pm
+
+    ui->dateTimeEdit->setCalendarPopup(true);
+    ui->dateTimeEdit->setDisplayFormat("yyyy-MM-dd HH:mm:ss");
+    // Set minimum date (one day after current date) and time (8 am)
+    QDateTime minDateTime = QDateTime(currentDate.addDays(1), minTime);
+    ui->dateTimeEdit->setMinimumDateTime(minDateTime);
+
+    // Set maximum date (one week from current date) and time (7 pm)
+    QDateTime maxDateTime = QDateTime(currentDate.addDays(7), maxTime);
+    ui->dateTimeEdit->setMaximumDateTime(maxDateTime);
 }
 
-void Booking::populateData()
-{
-    QSqlQuery query(MyDB::getInstance()->getDBInstance());
-    query.prepare("SELECT Slot FROM cppbuzz_booking WHERE Status = 'Y'");
-
-    if (!query.exec()) {
-        qDebug() << "Error executing query:" << query.lastError().text() << query.lastQuery();
-    } else {
-        qDebug() << "Read was successful:" << query.lastQuery();
-        ui->cmbSlot->clear();
-        while (query.next()) {
-            ui->cmbSlot->addItem(query.value(0).toString());
-        }
-    }
-}
-
-Booking::~Booking()
-{
+Booking::~Booking() {
     delete ui;
 }
-void Booking::on_btnBook_clicked()
-{
+
+void Booking::on_btnBook_clicked() {
     // Clear previous info message
-    ui->lblInfo->setText("");
+    ui->lblinfo->setText("");
 
     // Ensure the database is open
     if (!MyDB::getInstance()->getDBInstance().isOpen()) {
-        ui->lblInfo->setText("Error: Database is not open.");
+        ui->lblinfo->setText("Error: Database is not open.");
         return;
     }
 
     // Get input values
     QString sName = ui->txtName->text();
     QString sContactNo = ui->txtContactNo->text();
-    QString sSlot = ui->cmbSlot->currentText();
+    QDateTime sDateTime = ui->dateTimeEdit->dateTime(); // Get the selected date-time
+    QDateTime currentDateTime = QDateTime::currentDateTime();
 
     // Generate a random token number between 111111 and 999999
     int sTokenNo = QRandomGenerator::global()->bounded(111111, 999999 + 1);
-    QString sDate = QDate::currentDate().toString();
 
     QSqlQuery query(MyDB::getInstance()->getDBInstance());
 
-    // Update booking status
-    query.prepare("UPDATE cppbuzz_booking SET Status = 'N', TokenNo = :tokenNo WHERE Slot = :slot");
-    query.bindValue(":tokenNo", sTokenNo);
-    query.bindValue(":slot", sSlot);
-
+    // Check if the selected date-time is already booked
+    query.prepare("SELECT COUNT(*) FROM cppbuzz_transaction WHERE AppointmentDateTime = :dateTime");
+    query.bindValue(":dateTime", sDateTime.toString("yyyy-MM-dd HH:mm:ss"));
     if (!query.exec()) {
-        qDebug() << "Error updating booking status:" << query.lastError().text() << query.lastQuery();
-        ui->lblInfo->setText("Error: Could not update booking status.");
+        qDebug() << "Error checking for existing booking:" << query.lastError().text() << query.lastQuery();
+        ui->lblinfo->setText("Error: Could not check for existing booking.");
         return; // Early return on error
     }
 
-    // Insert transaction record
+    query.next();
+    int count = query.value(0).toInt();
+    if (count > 0) {
+        // If there is already a booking for the selected date-time
+        ui->lblinfo->setText("Error: The selected date and time is already booked.");
+        return; // Slot is already booked, return early
+    }
+
+    // Insert transaction record into `cppbuzz_transaction`
     query.clear(); // Clear previous query
-    query.prepare("INSERT INTO cppbuzz_transaction (Slot, CustomerName, CustomerContact, TokenNo, Status, DateTime) "
-                  "VALUES (:slot, :customerName, :customerContact, :tokenNo, 'Booked', :dateTime)");
-    query.bindValue(":slot", sSlot);
+    query.prepare("INSERT INTO cppbuzz_transaction (CustomerName, CustomerContact, TokenNo, Status, AppointmentDateTime, BookedTimeStamp) "
+                  "VALUES (:customerName, :customerContact, :tokenNo, 'Booked', :dateTime, :bookingTimestamp)");
     query.bindValue(":customerName", sName);
     query.bindValue(":customerContact", sContactNo);
     query.bindValue(":tokenNo", sTokenNo);
-    query.bindValue(":dateTime", sDate);
+    query.bindValue(":dateTime", sDateTime.toString("yyyy-MM-dd HH:mm:ss"));
+    query.bindValue(":bookingTimestamp", currentDateTime.toString("yyyy-MM-dd HH:mm:ss"));
 
     if (!query.exec()) {
         qDebug() << "Error inserting transaction record:" << query.lastError().text() << query.lastQuery();
-        ui->lblInfo->setText("Error: Could not insert transaction record.");
+        ui->lblinfo->setText("Error: Could not insert transaction record.");
         return; // Early return on error
     }
 
-    // If both queries were successful
+    // If the query was successful
     ui->txtName->clear();
     ui->txtContactNo->clear();
-    populateData(); // Refresh available slots
-    ui->lblInfo->setText("Slot has been booked! Token No: " + QString::number(sTokenNo));
+    ui->lblinfo->setText("Booking confirmed! Token No: " + QString::number(sTokenNo));
 }

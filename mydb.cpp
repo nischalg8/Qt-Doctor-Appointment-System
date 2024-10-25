@@ -13,10 +13,10 @@ void MyDB::init()
 {
     // Add the database connection
     db = QSqlDatabase::addDatabase("QSQLITE", "Data");
-    db.setDatabaseName("C:/cppbuzz_doctor_appointment.sqlite"); // Set the database path
+    db.setDatabaseName("C:\\Users\\LOQ\\Desktop\\Doctor_Appointment_In_QT\\Doctor_Appointment_In_QT\\cppbuzz_doctor_appoint.sqlite"); // Set the database path
 
     // Check if the database file exists
-    if (QFile::exists("C:/cppbuzz_doctor_appointment.sqlite")) {
+    if (QFile::exists("C:\\Users\\LOQ\\Desktop\\Doctor_Appointment_In_QT\\Doctor_Appointment_In_QT\\cppbuzz_doctor_appoint.sqlite")) {
         qDebug() << "DB file exists";
     } else {
         qDebug() << "DB file doesn't exist";

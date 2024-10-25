@@ -24,7 +24,7 @@ private slots:
 
     void on_btnCancellation_clicked();
 
-    void on_btnAvailableSlots_clicked();
+
 
     void on_btnRecords_clicked();
 

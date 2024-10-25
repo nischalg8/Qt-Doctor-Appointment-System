@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -23,9 +22,7 @@ class Ui_Cancellation
 {
 public:
     QPushButton *btnCancel;
-    QComboBox *cmbSlot;
     QLabel *label_2;
-    QLabel *label;
     QLineEdit *txtTokenNo;
     QLabel *lblInfo;
 
@@ -33,7 +30,7 @@ public:
     {
         if (Cancellation->objectName().isEmpty())
             Cancellation->setObjectName("Cancellation");
-        Cancellation->setWindowModality(Qt::WindowModal);
+        Cancellation->setWindowModality(Qt::WindowModality::WindowModal);
         Cancellation->resize(320, 151);
         btnCancel = new QPushButton(Cancellation);
         btnCancel->setObjectName("btnCancel");
@@ -41,18 +38,10 @@ public:
         QFont font;
         font.setPointSize(10);
         btnCancel->setFont(font);
-        cmbSlot = new QComboBox(Cancellation);
-        cmbSlot->setObjectName("cmbSlot");
-        cmbSlot->setGeometry(QRect(150, 10, 111, 22));
-        cmbSlot->setFont(font);
         label_2 = new QLabel(Cancellation);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(40, 40, 91, 21));
         label_2->setFont(font);
-        label = new QLabel(Cancellation);
-        label->setObjectName("label");
-        label->setGeometry(QRect(40, 10, 91, 16));
-        label->setFont(font);
         txtTokenNo = new QLineEdit(Cancellation);
         txtTokenNo->setObjectName("txtTokenNo");
         txtTokenNo->setGeometry(QRect(150, 40, 113, 20));
@@ -71,7 +60,6 @@ public:
         Cancellation->setWindowTitle(QCoreApplication::translate("Cancellation", "Cancel Booking", nullptr));
         btnCancel->setText(QCoreApplication::translate("Cancellation", "CANCEL", nullptr));
         label_2->setText(QCoreApplication::translate("Cancellation", "Token No", nullptr));
-        label->setText(QCoreApplication::translate("Cancellation", "Select Slot", nullptr));
         lblInfo->setText(QString());
     } // retranslateUi
 
