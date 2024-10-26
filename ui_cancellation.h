@@ -41,13 +41,21 @@ public:
         QFont font;
         font.setBold(true);
         btnCancel->setFont(font);
-        btnCancel->setStyleSheet(QString::fromUtf8(" background-color: white;\n"
-"    border: 2px solid #3498db;\n"
-"    color: #3498db;\n"
-"    padding: 5px 10px;\n"
-"    border-radius: 8px;\n"
-"    font-size: 14px;\n"
-"    font-weight: bold;                   "));
+        btnCancel->setStyleSheet(QString::fromUtf8("\n"
+"    QPushButton {\n"
+"        background-color: white;\n"
+"        border: 2px solid #3498db;\n"
+"        color: #3498db;\n"
+"        padding: 5px 10px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"        font-weight: bold;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: #3498db;\n"
+"        color: white;\n"
+"    }\n"
+"    "));
         txtTokenNo = new QLineEdit(Cancellation);
         txtTokenNo->setObjectName("txtTokenNo");
         txtTokenNo->setGeometry(QRect(240, 120, 171, 31));
@@ -96,7 +104,7 @@ public:
         btnCancel->setText(QCoreApplication::translate("Cancellation", "CANCEL", nullptr));
         label_2->setText(QCoreApplication::translate("Cancellation", "Token no.", nullptr));
         lblInfo->setText(QString());
-        label->setText(QCoreApplication::translate("Cancellation", "Cancel your appointment !", nullptr));
+        label->setText(QCoreApplication::translate("Cancellation", "Cancel your appointment!", nullptr));
         label_3->setText(QCoreApplication::translate("Cancellation", "Contact no.", nullptr));
     } // retranslateUi
 

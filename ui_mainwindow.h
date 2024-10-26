@@ -50,65 +50,82 @@ public:
         btnBooking->setObjectName("btnBooking");
         btnBooking->setGeometry(QRect(110, 410, 131, 101));
         btnBooking->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; /* Green */\n"
-"    color: white;\n"
-"    font-size: 20px;\n"
-"    border: none;\n"
-"    padding: 12px 24px;\n"
-"    border-radius: 8px;\n"
+" color: white;\n"
+" font-size: 20px;\n"
+" border: none;\n"
+" padding: 12px 24px;\n"
+" border-radius: 8px;\n"
+" font-family: 'Comic Sans MS', cursive, sans-serif;\n"
+"}\n"
 "\n"
-"font-family: 'Comic Sans MS', cursive, sans-serif;\n"
-"\n"
-"  "));
+"QPushButton:hover {\n"
+" background-color: #45a049; /* Darker green on hover */\n"
+"}\n"
+""));
         btnCancellation = new QPushButton(centralWidget);
         btnCancellation->setObjectName("btnCancellation");
         btnCancellation->setGeometry(QRect(270, 410, 161, 101));
         btnCancellation->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; /* Green */\n"
-"    color: white;\n"
-"    font-size: 20px;\n"
-"    border: none;\n"
-"    padding: 12px 24px;\n"
-"    border-radius: 8px;\n"
-"    cursor: pointer;\n"
-"font-family: 'Comic Sans MS', cursive, sans-serif;\n"
-"  "));
+" color: white;\n"
+" font-size: 20px;\n"
+" border: none;\n"
+" padding: 12px 24px;\n"
+" border-radius: 8px;\n"
+" cursor: pointer;\n"
+" font-family: 'Comic Sans MS', cursive, sans-serif;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+" background-color: #45a049; /* Darker green on hover */\n"
+"}\n"
+""));
         btnRecords = new QPushButton(centralWidget);
         btnRecords->setObjectName("btnRecords");
         btnRecords->setGeometry(QRect(650, 410, 151, 101));
         btnRecords->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; /* Green */\n"
-"    color: white;\n"
-"    font-size: 20px;\n"
-"    border: none;\n"
-"    padding: 12px 24px;\n"
-"    border-radius: 8px;\n"
-"  font-family: 'Comic Sans MS', cursive, sans-serif;"));
+" color: white;\n"
+" font-size: 20px;\n"
+" border: none;\n"
+" padding: 12px 24px;\n"
+" border-radius: 8px;\n"
+" font-family: 'Comic Sans MS', cursive, sans-serif;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+" background-color: #45a049; /* Darker green on hover */\n"
+"}\n"
+""));
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(190, 50, 521, 61));
+        label_4->setGeometry(QRect(180, 40, 521, 101));
         label_4->setStyleSheet(QString::fromUtf8("\n"
-"    color: black;\n"
+"    color: Black;\n"
 "    font-size: 30px;\n"
 "    border: none;\n"
 "    padding: 12px 24px;\n"
 "    border-radius: 8px;\n"
-"\n"
-"font-family: 'Comic Sans MS', cursive, sans-serif;\n"
-"\n"
+"    font-family: 'Comic Sans MS', cursive, sans-serif;\n"
 "  "));
         btnReschedule = new QPushButton(centralWidget);
         btnReschedule->setObjectName("btnReschedule");
         btnReschedule->setGeometry(QRect(460, 410, 161, 101));
         btnReschedule->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; /* Green */\n"
-"    color: white;\n"
-"    font-size: 20px;\n"
-"    border: none;\n"
-"    padding: 12px 24px;\n"
-"    border-radius: 8px;\n"
-"    cursor: pointer;\n"
-"font-family: 'Comic Sans MS', cursive, sans-serif;\n"
-"  "));
+" color: white;\n"
+" font-size: 20px;\n"
+" border: none;\n"
+" padding: 12px 24px;\n"
+" border-radius: 8px;\n"
+" cursor: pointer;\n"
+" font-family: 'Comic Sans MS', cursive, sans-serif;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+" background-color: #45a049; /* Darker green on hover */\n"
+"}\n"
+""));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(340, 190, 191, 121));
+        label_2->setGeometry(QRect(340, 180, 181, 161));
         label_2->setPixmap(QPixmap(QString::fromUtf8(":/resources/images/medappoint logo.png")));
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);

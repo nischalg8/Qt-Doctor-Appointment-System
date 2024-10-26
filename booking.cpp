@@ -93,7 +93,7 @@ void Booking::setupDateTimeEdit()
     });
 }
 
-// Loads doctors from the database and populates the doctor combo box
+
 
 // Called when booking button is clicked
 void Booking::on_btnBook_clicked()

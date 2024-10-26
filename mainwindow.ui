@@ -46,15 +46,18 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #4CAF50; /* Green */
-    color: white;
-    font-size: 20px;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
+ color: white;
+ font-size: 20px;
+ border: none;
+ padding: 12px 24px;
+ border-radius: 8px;
+ font-family: 'Comic Sans MS', cursive, sans-serif;
+}
 
-font-family: 'Comic Sans MS', cursive, sans-serif;
-
-  </string>
+QPushButton:hover {
+ background-color: #45a049; /* Darker green on hover */
+}
+</string>
     </property>
     <property name="text">
      <string>Booking</string>
@@ -71,14 +74,19 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #4CAF50; /* Green */
-    color: white;
-    font-size: 20px;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-font-family: 'Comic Sans MS', cursive, sans-serif;
-  </string>
+ color: white;
+ font-size: 20px;
+ border: none;
+ padding: 12px 24px;
+ border-radius: 8px;
+ cursor: pointer;
+ font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+QPushButton:hover {
+ background-color: #45a049; /* Darker green on hover */
+}
+</string>
     </property>
     <property name="text">
      <string>Cancellation</string>
@@ -95,12 +103,18 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #4CAF50; /* Green */
-    color: white;
-    font-size: 20px;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-  font-family: 'Comic Sans MS', cursive, sans-serif;</string>
+ color: white;
+ font-size: 20px;
+ border: none;
+ padding: 12px 24px;
+ border-radius: 8px;
+ font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+QPushButton:hover {
+ background-color: #45a049; /* Darker green on hover */
+}
+</string>
     </property>
     <property name="text">
      <string>Records</string>
@@ -109,22 +123,20 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>50</y>
+      <x>180</x>
+      <y>40</y>
       <width>521</width>
-      <height>61</height>
+      <height>101</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">
-    color: black;
+    color: Black;
     font-size: 30px;
     border: none;
     padding: 12px 24px;
     border-radius: 8px;
-
-font-family: 'Comic Sans MS', cursive, sans-serif;
-
+    font-family: 'Comic Sans MS', cursive, sans-serif;
   </string>
     </property>
     <property name="text">
@@ -142,14 +154,19 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #4CAF50; /* Green */
-    color: white;
-    font-size: 20px;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-font-family: 'Comic Sans MS', cursive, sans-serif;
-  </string>
+ color: white;
+ font-size: 20px;
+ border: none;
+ padding: 12px 24px;
+ border-radius: 8px;
+ cursor: pointer;
+ font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+QPushButton:hover {
+ background-color: #45a049; /* Darker green on hover */
+}
+</string>
     </property>
     <property name="text">
      <string>Reschedule</string>
@@ -159,9 +176,9 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>190</y>
-      <width>191</width>
-      <height>121</height>
+      <y>180</y>
+      <width>181</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="text">

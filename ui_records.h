@@ -36,17 +36,16 @@ public:
         if (Records->objectName().isEmpty())
             Records->setObjectName("Records");
         Records->setWindowModality(Qt::WindowModality::WindowModal);
-        Records->resize(880, 541);
+        Records->resize(1005, 632);
         tableView = new QTableView(Records);
         tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(30, 240, 821, 231));
+        tableView->setGeometry(QRect(0, 230, 1001, 311));
         tableView->setStyleSheet(QString::fromUtf8("border:none"));
         lblinfo = new QLabel(Records);
         lblinfo->setObjectName("lblinfo");
-        lblinfo->setGeometry(QRect(180, 490, 491, 31));
+        lblinfo->setGeometry(QRect(250, 560, 491, 31));
         lblinfo->setStyleSheet(QString::fromUtf8("font-family: 'Comic Sans MS', cursive, sans-serif;\n"
-"font-size:20px;\n"
-""));
+"font-size:20px;"));
         lineEdit = new QLineEdit(Records);
         lineEdit->setObjectName("lineEdit");
         lineEdit->setGeometry(QRect(300, 70, 151, 31));
@@ -64,20 +63,25 @@ public:
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(170, 120, 111, 31));
         label_2->setStyleSheet(QString::fromUtf8("font-family: 'Comic Sans MS', cursive, sans-serif;\n"
-"font-size:20px;\n"
-"\n"
-"\n"
-""));
+"font-size:20px;"));
         btnSearch = new QPushButton(Records);
         btnSearch->setObjectName("btnSearch");
         btnSearch->setGeometry(QRect(320, 170, 111, 41));
-        btnSearch->setStyleSheet(QString::fromUtf8(" background-color: white;\n"
-"    border: 2px solid #3498db;\n"
-"    color: #3498db;\n"
-"    padding: 5px 10px;\n"
-"    border-radius: 8px;\n"
-"    font-size: 14px;\n"
-"    font-weight: bold;                   "));
+        btnSearch->setStyleSheet(QString::fromUtf8("\n"
+"    QPushButton {\n"
+"        background-color: white;\n"
+"        border: 2px solid #3498db;\n"
+"        color: #3498db;\n"
+"        padding: 5px 10px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"        font-weight: bold;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: #3498db;\n"
+"        color: white;\n"
+"    }\n"
+"    "));
 
         retranslateUi(Records);
 

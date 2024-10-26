@@ -55,7 +55,9 @@ public:
 "font-size:20px;"));
         textLabel = new QLabel(Reschedule);
         textLabel->setObjectName("textLabel");
-        textLabel->setGeometry(QRect(210, 460, 401, 41));
+        textLabel->setGeometry(QRect(140, 460, 541, 31));
+        textLabel->setStyleSheet(QString::fromUtf8("font-family: 'Comic Sans MS', cursive, sans-serif;\n"
+"font-size:20px;"));
         lineEdit = new QLineEdit(Reschedule);
         lineEdit->setObjectName("lineEdit");
         lineEdit->setGeometry(QRect(330, 120, 181, 31));
@@ -101,7 +103,9 @@ public:
 "    font-weight: bold;                   "));
         textLabel_2 = new QLabel(Reschedule);
         textLabel_2->setObjectName("textLabel_2");
-        textLabel_2->setGeometry(QRect(210, 290, 421, 31));
+        textLabel_2->setGeometry(QRect(190, 290, 521, 31));
+        textLabel_2->setStyleSheet(QString::fromUtf8("font-family: 'Comic Sans MS', cursive, sans-serif;\n"
+"font-size:20px;"));
 
         retranslateUi(Reschedule);
 

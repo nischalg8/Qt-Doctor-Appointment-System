@@ -68,13 +68,21 @@ public:
         QFont font2;
         font2.setBold(true);
         btnBook->setFont(font2);
-        btnBook->setStyleSheet(QString::fromUtf8(" background-color: white;\n"
-"    border: 2px solid #3498db;\n"
-"    color: #3498db;\n"
-"    padding: 5px 10px;\n"
-"    border-radius: 8px;\n"
-"    font-size: 14px;\n"
-"    font-weight: bold;                   "));
+        btnBook->setStyleSheet(QString::fromUtf8("\n"
+"    QPushButton {\n"
+"        background-color: white;\n"
+"        border: 2px solid #3498db;\n"
+"        color: #3498db;\n"
+"        padding: 5px 10px;\n"
+"        border-radius: 8px;\n"
+"        font-size: 14px;\n"
+"        font-weight: bold;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: #3498db;\n"
+"        color: white;\n"
+"    }\n"
+"    "));
         label_3 = new QLabel(Booking);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(70, 260, 171, 21));
@@ -103,8 +111,6 @@ public:
 "    color: #333;\n"
 "    min-width: 150px;\n"
 "}\n"
-"\n"
-"\n"
 ""));
         dateTimeEdit->setMaximumDateTime(QDateTime(QDate(9999, 5, 30), QTime(23, 59, 59)));
         label_4 = new QLabel(Booking);
@@ -135,7 +141,7 @@ public:
         btnBook->setText(QCoreApplication::translate("Booking", "BOOK", nullptr));
         label_3->setText(QCoreApplication::translate("Booking", "Contact Number *", nullptr));
         lblinfo->setText(QString());
-        label_4->setText(QCoreApplication::translate("Booking", "Enter time from 8 am to 7 pm", nullptr));
+        label_4->setText(QCoreApplication::translate("Booking", "Enter time from 8 am to 5 pm", nullptr));
         label_5->setText(QCoreApplication::translate("Booking", "Doctor list ", nullptr));
     } // retranslateUi
 

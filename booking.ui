@@ -96,13 +96,21 @@ font-size:20px;</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true"> background-color: white;
-    border: 2px solid #3498db;
-    color: #3498db;
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bold;                   </string>
+    <string notr="true">
+    QPushButton {
+        background-color: white;
+        border: 2px solid #3498db;
+        color: #3498db;
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    QPushButton:hover {
+        background-color: #3498db;
+        color: white;
+    }
+    </string>
    </property>
    <property name="text">
     <string>BOOK</string>
@@ -185,8 +193,6 @@ font-size:20px;</string>
     color: #333;
     min-width: 150px;
 }
-
-
 </string>
    </property>
    <property name="maximumDateTime">
@@ -214,7 +220,7 @@ font-size:20px;</string>
 font-size:20px;</string>
    </property>
    <property name="text">
-    <string>Enter time from 8 am to 7 pm</string>
+    <string>Enter time from 8 am to 5 pm</string>
    </property>
   </widget>
   <widget class="QComboBox" name="doctorComboBox">

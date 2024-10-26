@@ -40,7 +40,7 @@ constexpr auto qt_meta_stringdata_CLASSRescheduleENDCLASS = QtMocHelpers::string
     "on_btnSearch_clicked",
     "",
     "on_btnSave_clicked",
-    "updateTimeLimits"
+    "updateSaveButtonState"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -86,7 +86,7 @@ Q_CONSTINIT const QMetaObject Reschedule::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_btnSave_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'updateTimeLimits'
+        // method 'updateSaveButtonState'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -100,7 +100,7 @@ void Reschedule::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_btnSearch_clicked(); break;
         case 1: _t->on_btnSave_clicked(); break;
-        case 2: _t->updateTimeLimits(); break;
+        case 2: _t->updateSaveButtonState(); break;
         default: ;
         }
     }
