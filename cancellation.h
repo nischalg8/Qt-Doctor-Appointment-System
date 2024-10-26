@@ -18,7 +18,7 @@ public:
 
 
 private slots:
-    void on_btnBook_clicked();
+
 
     void on_btnCancel_clicked();
 

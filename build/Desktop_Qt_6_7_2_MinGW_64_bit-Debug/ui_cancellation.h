@@ -25,16 +25,18 @@ public:
     QLabel *label_2;
     QLineEdit *txtTokenNo;
     QLabel *lblInfo;
+    QLineEdit *txtContactNo;
+    QLabel *label;
 
     void setupUi(QDialog *Cancellation)
     {
         if (Cancellation->objectName().isEmpty())
             Cancellation->setObjectName("Cancellation");
         Cancellation->setWindowModality(Qt::WindowModality::WindowModal);
-        Cancellation->resize(320, 151);
+        Cancellation->resize(419, 232);
         btnCancel = new QPushButton(Cancellation);
         btnCancel->setObjectName("btnCancel");
-        btnCancel->setGeometry(QRect(110, 80, 75, 30));
+        btnCancel->setGeometry(QRect(160, 120, 75, 30));
         QFont font;
         font.setPointSize(10);
         btnCancel->setFont(font);
@@ -48,7 +50,13 @@ public:
         txtTokenNo->setFont(font);
         lblInfo = new QLabel(Cancellation);
         lblInfo->setObjectName("lblInfo");
-        lblInfo->setGeometry(QRect(70, 120, 181, 16));
+        lblInfo->setGeometry(QRect(50, 170, 321, 20));
+        txtContactNo = new QLineEdit(Cancellation);
+        txtContactNo->setObjectName("txtContactNo");
+        txtContactNo->setGeometry(QRect(150, 70, 113, 21));
+        label = new QLabel(Cancellation);
+        label->setObjectName("label");
+        label->setGeometry(QRect(40, 70, 81, 20));
 
         retranslateUi(Cancellation);
 
@@ -61,6 +69,7 @@ public:
         btnCancel->setText(QCoreApplication::translate("Cancellation", "CANCEL", nullptr));
         label_2->setText(QCoreApplication::translate("Cancellation", "Token No", nullptr));
         lblInfo->setText(QString());
+        label->setText(QCoreApplication::translate("Cancellation", "Contact No", nullptr));
     } // retranslateUi
 
 };

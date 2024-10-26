@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
@@ -30,6 +31,8 @@ public:
     QLineEdit *txtContactNo;
     QLabel *lblinfo;
     QDateTimeEdit *dateTimeEdit;
+    QComboBox *doctorComboBox;
+    QLabel *label_4;
 
     void setupUi(QDialog *Booking)
     {
@@ -45,11 +48,11 @@ public:
         label->setFont(font);
         txtName = new QLineEdit(Booking);
         txtName->setObjectName("txtName");
-        txtName->setGeometry(QRect(270, 100, 113, 20));
+        txtName->setGeometry(QRect(270, 160, 113, 20));
         txtName->setFont(font);
         label_2 = new QLabel(Booking);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(80, 90, 131, 21));
+        label_2->setGeometry(QRect(80, 160, 131, 21));
         label_2->setFont(font);
         btnBook = new QPushButton(Booking);
         btnBook->setObjectName("btnBook");
@@ -57,11 +60,11 @@ public:
         btnBook->setFont(font);
         label_3 = new QLabel(Booking);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(80, 130, 131, 21));
+        label_3->setGeometry(QRect(80, 200, 131, 21));
         label_3->setFont(font);
         txtContactNo = new QLineEdit(Booking);
         txtContactNo->setObjectName("txtContactNo");
-        txtContactNo->setGeometry(QRect(270, 130, 113, 20));
+        txtContactNo->setGeometry(QRect(270, 200, 113, 20));
         txtContactNo->setFont(font);
         lblinfo = new QLabel(Booking);
         lblinfo->setObjectName("lblinfo");
@@ -70,6 +73,12 @@ public:
         dateTimeEdit->setObjectName("dateTimeEdit");
         dateTimeEdit->setGeometry(QRect(270, 60, 194, 29));
         dateTimeEdit->setMaximumDateTime(QDateTime(QDate(9999, 5, 30), QTime(23, 59, 59)));
+        doctorComboBox = new QComboBox(Booking);
+        doctorComboBox->setObjectName("doctorComboBox");
+        doctorComboBox->setGeometry(QRect(280, 110, 201, 28));
+        label_4 = new QLabel(Booking);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(100, 120, 71, 20));
 
         retranslateUi(Booking);
 
@@ -84,6 +93,7 @@ public:
         btnBook->setText(QCoreApplication::translate("Booking", "BOOK", nullptr));
         label_3->setText(QCoreApplication::translate("Booking", "Contact Number", nullptr));
         lblinfo->setText(QCoreApplication::translate("Booking", "TextLabel", nullptr));
+        label_4->setText(QCoreApplication::translate("Booking", "Doctor list", nullptr));
     } // retranslateUi
 
 };

@@ -1663,15 +1663,26 @@ debug/booking.o: ../../booking.cpp ../../booking.h \
 		D:/Qt/6.7.2/mingw_64/include/QtCore/QVariant \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QApplication \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qapplication.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QDateTimeEdit \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qdatetimeedit.h \
-		D:/Qt/6.7.2/mingw_64/include/QtCore/qtimezone.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QComboBox \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qcombobox.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyleoption.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
 		D:/Qt/6.7.2/mingw_64/include/QtGui/qvalidator.h \
 		D:/Qt/6.7.2/mingw_64/include/QtCore/qregularexpression.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qslider.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractslider.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyle.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabbar.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qrubberband.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
+		D:/Qt/6.7.2/mingw_64/include/QtCore/qabstractitemmodel.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QDateTimeEdit \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qdatetimeedit.h \
+		D:/Qt/6.7.2/mingw_64/include/QtCore/qtimezone.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
 		D:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
 		D:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLineEdit \
@@ -1893,23 +1904,9 @@ debug/cancellation.o: ../../cancellation.cpp ../../cancellation.h \
 		D:/Qt/6.7.2/mingw_64/include/QtCore/QVariant \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QApplication \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qapplication.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QComboBox \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qcombobox.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyleoption.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
-		D:/Qt/6.7.2/mingw_64/include/QtGui/qvalidator.h \
-		D:/Qt/6.7.2/mingw_64/include/QtCore/qregularexpression.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qslider.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractslider.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyle.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabbar.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qrubberband.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
-		D:/Qt/6.7.2/mingw_64/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
 		D:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
 		D:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLineEdit \
@@ -2149,6 +2146,19 @@ debug/records.o: ../../records.cpp ../../records.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabbar.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qrubberband.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+		D:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
+		D:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLineEdit \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlineedit.h \
+		D:/Qt/6.7.2/mingw_64/include/QtGui/qtextcursor.h \
+		D:/Qt/6.7.2/mingw_64/include/QtGui/qtextformat.h \
+		D:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h \
+		D:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QPushButton \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qpushbutton.h \
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QTableView \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qtableview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\records.o ..\..\records.cpp

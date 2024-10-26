@@ -24,7 +24,7 @@ public:
     QWidget *centralWidget;
     QPushButton *btnBooking;
     QPushButton *btnCancellation;
-    QPushButton *btnAvailableSlots;
+    QPushButton *btnReschedule;
     QPushButton *btnRecords;
     QStatusBar *statusBar;
 
@@ -41,9 +41,9 @@ public:
         btnCancellation = new QPushButton(centralWidget);
         btnCancellation->setObjectName("btnCancellation");
         btnCancellation->setGeometry(QRect(100, 10, 75, 61));
-        btnAvailableSlots = new QPushButton(centralWidget);
-        btnAvailableSlots->setObjectName("btnAvailableSlots");
-        btnAvailableSlots->setGeometry(QRect(190, 10, 75, 61));
+        btnReschedule = new QPushButton(centralWidget);
+        btnReschedule->setObjectName("btnReschedule");
+        btnReschedule->setGeometry(QRect(190, 10, 81, 61));
         btnRecords = new QPushButton(centralWidget);
         btnRecords->setObjectName("btnRecords");
         btnRecords->setGeometry(QRect(280, 10, 75, 61));
@@ -62,8 +62,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Doctor Appointment 1.0", nullptr));
         btnBooking->setText(QCoreApplication::translate("MainWindow", "Booking", nullptr));
         btnCancellation->setText(QCoreApplication::translate("MainWindow", "Cancellation", nullptr));
-        btnAvailableSlots->setText(QCoreApplication::translate("MainWindow", "Available\n"
-" Slots", nullptr));
+        btnReschedule->setText(QCoreApplication::translate("MainWindow", "Reschedule", nullptr));
         btnRecords->setText(QCoreApplication::translate("MainWindow", "Records", nullptr));
     } // retranslateUi
 

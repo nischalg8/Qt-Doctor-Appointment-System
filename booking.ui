@@ -38,7 +38,7 @@
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>100</y>
+     <y>160</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -53,7 +53,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>90</y>
+     <y>160</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -89,7 +89,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>130</y>
+     <y>200</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -107,7 +107,7 @@
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>130</y>
+     <y>200</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -149,6 +149,29 @@
      <month>5</month>
      <day>30</day>
     </datetime>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="doctorComboBox">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>110</y>
+     <width>201</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>120</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Doctor list</string>
    </property>
   </widget>
  </widget>

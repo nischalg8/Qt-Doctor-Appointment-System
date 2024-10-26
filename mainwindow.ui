@@ -40,18 +40,17 @@
      <string>Cancellation</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnAvailableSlots">
+   <widget class="QPushButton" name="btnReschedule">
     <property name="geometry">
      <rect>
       <x>190</x>
       <y>10</y>
-      <width>75</width>
+      <width>81</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Available
- Slots</string>
+     <string>Reschedule</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnRecords">

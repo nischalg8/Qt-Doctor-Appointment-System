@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>320</width>
-    <height>151</height>
+    <width>419</width>
+    <height>232</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
   <widget class="QPushButton" name="btnCancel">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>80</y>
+     <x>160</x>
+     <y>120</y>
      <width>75</width>
      <height>30</height>
     </rect>
@@ -70,14 +70,37 @@
   <widget class="QLabel" name="lblInfo">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>120</y>
-     <width>181</width>
-     <height>16</height>
+     <x>50</x>
+     <y>170</y>
+     <width>321</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtContactNo">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>70</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Contact No</string>
    </property>
   </widget>
  </widget>

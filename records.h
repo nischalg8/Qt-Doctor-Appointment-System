@@ -19,8 +19,9 @@ class Records : public QDialog
 public:
     explicit Records(QWidget *parent = nullptr);
     ~Records();
-    void populateData();
-
+   // void populateData();
+public slots:
+      void populateData();
 private:
     Ui::Records *ui;
     void getRecords();
