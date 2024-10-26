@@ -19,13 +19,16 @@ class Reschedule : public QDialog
 public:
     explicit Reschedule(QWidget *parent = nullptr);
     ~Reschedule();
-
+protected:
+    void showEvent(QShowEvent *event) override;  // Override showEvent
+    void closeEvent(QCloseEvent *event) override; // Override closeEvent
 private slots:
     void on_btnSearch_clicked();
     void on_btnSave_clicked();  // Declare the new slot
-
+    void updateTimeLimits();
 private:
     Ui::Reschedule *ui;
+    QString doctorName;
 };
 
 #endif // RESCHEDULE_H

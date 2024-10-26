@@ -16,7 +16,9 @@ public:
     explicit Cancellation(QWidget *parent = nullptr);
     ~Cancellation();
 
-
+protected:
+    void showEvent(QShowEvent *event) override;  // Override showEvent
+    void closeEvent(QCloseEvent *event) override; // Override closeEvent
 private slots:
 
 

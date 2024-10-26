@@ -18,10 +18,13 @@ public:
     ~Booking();
     void populateData();  // This method can remain if you're still fetching available data
     // You can also add methods here if needed for date-time handling
-
+protected:
+    void showEvent(QShowEvent *event) override;  // Override showEvent
+    void closeEvent(QCloseEvent *event) override; // Override closeEvent
 private slots:
     void on_btnBook_clicked();  // Updated slot for booking with date-time
 
+    void setupDateTimeEdit();
 private:
     Ui::Booking *ui;
     // If you need any additional private members for date-time, declare them here

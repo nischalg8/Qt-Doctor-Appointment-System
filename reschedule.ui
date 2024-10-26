@@ -16,11 +16,15 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>130</y>
-     <width>101</width>
-     <height>20</height>
+     <x>160</x>
+     <y>120</y>
+     <width>151</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Comic Sans MS', cursive, sans-serif;
+font-size:20px;</string>
    </property>
    <property name="text">
     <string>Enter TokenNo</string>
@@ -29,11 +33,15 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>160</x>
      <y>190</y>
-     <width>91</width>
-     <height>20</height>
+     <width>131</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Comic Sans MS', cursive, sans-serif;
+font-size:20px;</string>
    </property>
    <property name="text">
     <string>Enter Contact</string>
@@ -42,11 +50,15 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>330</y>
-     <width>111</width>
-     <height>20</height>
+     <x>160</x>
+     <y>340</y>
+     <width>151</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Comic Sans MS', cursive, sans-serif;
+font-size:20px;</string>
    </property>
    <property name="text">
     <string>New Date/Time</string>
@@ -58,7 +70,7 @@
      <x>210</x>
      <y>460</y>
      <width>401</width>
-     <height>20</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -68,21 +80,27 @@
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>330</x>
      <y>120</y>
-     <width>113</width>
-     <height>28</height>
+     <width>181</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>330</x>
      <y>180</y>
-     <width>113</width>
-     <height>28</height>
+     <width>181</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;</string>
    </property>
   </widget>
   <widget class="QDateTimeEdit" name="dateTimeEdit">
@@ -90,19 +108,42 @@
     <rect>
      <x>330</x>
      <y>330</y>
-     <width>194</width>
-     <height>29</height>
+     <width>211</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDateTimeEdit {
+    font-size: 14px;
+    padding: 6px;
+    border: 1px solid #c3cfd9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    min-width: 150px;
+}
+
+
+</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>360</x>
+     <x>350</x>
      <y>400</y>
-     <width>83</width>
-     <height>29</height>
+     <width>131</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: white;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;                   </string>
    </property>
    <property name="text">
     <string>Reschedule</string>
@@ -113,9 +154,18 @@
     <rect>
      <x>360</x>
      <y>230</y>
-     <width>83</width>
-     <height>29</height>
+     <width>101</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: white;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;                   </string>
    </property>
    <property name="text">
     <string>Search</string>
@@ -124,10 +174,10 @@
   <widget class="QLabel" name="textLabel_2">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>280</y>
-     <width>401</width>
-     <height>21</height>
+     <x>210</x>
+     <y>290</y>
+     <width>421</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">

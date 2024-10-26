@@ -13,6 +13,25 @@ Cancellation::~Cancellation()
 {
     delete ui;
 }
+void Cancellation::showEvent(QShowEvent *event)
+{
+    QDialog::showEvent(event);
+
+    ui->txtTokenNo->clear();      // Clear token number input
+    ui->txtContactNo->clear();    // Clear contact number input
+    ui->lblInfo->clear();         // Clear information label
+}
+
+// Reset fields when the dialog is closed
+void Cancellation::closeEvent(QCloseEvent *event)
+{
+    ui->txtTokenNo->clear();
+    ui->txtContactNo->clear();
+    ui->lblInfo->clear();
+
+    QDialog::closeEvent(event);
+}
+
 
 void Cancellation::on_btnCancel_clicked() {
     QString sTokenNo = ui->txtTokenNo->text();
@@ -20,7 +39,7 @@ void Cancellation::on_btnCancel_clicked() {
     QSqlQuery query(MyDB::getInstance()->getDBInstance());
 
     // Delete the record if the token number and contact number match
-    query.prepare("DELETE FROM cppbuzz_transaction WHERE TokenNo = :tokenNo AND CustomerContact = :contactNo");
+    query.prepare("DELETE FROM records_table WHERE TokenNo = :tokenNo AND CustomerContact = :contactNo");
     query.bindValue(":tokenNo", sTokenNo);
     query.bindValue(":contactNo", sContactNo);
 

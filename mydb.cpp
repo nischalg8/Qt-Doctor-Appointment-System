@@ -1,5 +1,5 @@
 #include "mydb.h"
-
+#include <QString>
 MyDB* MyDB::instance = nullptr;
 
 // Constructor
@@ -13,10 +13,11 @@ void MyDB::init()
 {
     // Add the database connection
     db = QSqlDatabase::addDatabase("QSQLITE", "Data");
-    db.setDatabaseName("C:\\Users\\LOQ\\Desktop\\Doctor_Appointment_In_QT\\Doctor_Appointment_In_QT\\cppbuzz_doctor_appoint.sqlite"); // Set the database path
+    QString path_to_database = QString(PROJECT) + "/databaseforDAS.sqlite";
+    db.setDatabaseName(path_to_database);
 
     // Check if the database file exists
-    if (QFile::exists("C:\\Users\\LOQ\\Desktop\\Doctor_Appointment_In_QT\\Doctor_Appointment_In_QT\\cppbuzz_doctor_appoint.sqlite")) {
+    if (QFile::exists(path_to_database)) {
         qDebug() << "DB file exists";
     } else {
         qDebug() << "DB file doesn't exist";

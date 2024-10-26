@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>232</height>
+    <width>598</width>
+    <height>345</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,88 +19,145 @@
   <widget class="QPushButton" name="btnCancel">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>120</y>
-     <width>75</width>
-     <height>30</height>
+     <x>240</x>
+     <y>220</y>
+     <width>81</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: white;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;                   </string>
    </property>
    <property name="text">
     <string>CANCEL</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>40</y>
-     <width>91</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Token No</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="txtTokenNo">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>40</y>
-     <width>113</width>
-     <height>20</height>
+     <x>240</x>
+     <y>120</y>
+     <width>171</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>120</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comic Sans MS</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Comic Sans MS', cursive, sans-serif;
+font-size:20px;</string>
+   </property>
+   <property name="text">
+    <string>Token no.</string>
    </property>
   </widget>
   <widget class="QLabel" name="lblInfo">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>170</y>
-     <width>321</width>
-     <height>20</height>
+     <x>100</x>
+     <y>290</y>
+     <width>371</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Comic Sans MS', cursive, sans-serif;
+font-size:20px;</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="txtContactNo">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>70</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>70</y>
-     <width>81</width>
-     <height>20</height>
+     <x>140</x>
+     <y>50</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Comic Sans MS', cursive, sans-serif;
+font-size:20px;</string>
+   </property>
    <property name="text">
-    <string>Contact No</string>
+    <string>Cancel your appointment !</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>170</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comic Sans MS</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Comic Sans MS', cursive, sans-serif;
+font-size:20px;</string>
+   </property>
+   <property name="text">
+    <string>Contact no.</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtContactNo">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>170</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;</string>
    </property>
   </widget>
  </widget>

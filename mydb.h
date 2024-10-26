@@ -16,6 +16,7 @@ private:
     static MyDB *instance;
     void init();
     QSqlDatabase db;
+
 public:
     static MyDB* getInstance();
     static void ResetInstance();
