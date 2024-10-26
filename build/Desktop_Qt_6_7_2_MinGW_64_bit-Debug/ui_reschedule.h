@@ -19,67 +19,77 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_reschedule
+class Ui_Reschedule
 {
 public:
     QLabel *label;
     QLabel *label_2;
+    QLabel *label_3;
+    QLabel *textLabel;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
-    QLabel *label_3;
-    QPushButton *pushButton;
     QDateTimeEdit *dateTimeEdit;
-    QLabel *label_4;
+    QPushButton *btnSave;
+    QPushButton *btnSearch;
+    QLabel *textLabel_2;
 
-    void setupUi(QDialog *reschedule)
+    void setupUi(QDialog *Reschedule)
     {
-        if (reschedule->objectName().isEmpty())
-            reschedule->setObjectName("reschedule");
-        reschedule->resize(597, 365);
-        label = new QLabel(reschedule);
+        if (Reschedule->objectName().isEmpty())
+            Reschedule->setObjectName("Reschedule");
+        Reschedule->resize(883, 601);
+        label = new QLabel(Reschedule);
         label->setObjectName("label");
-        label->setGeometry(QRect(90, 80, 63, 20));
-        label_2 = new QLabel(reschedule);
+        label->setGeometry(QRect(200, 130, 101, 20));
+        label_2 = new QLabel(Reschedule);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(90, 110, 81, 20));
-        lineEdit = new QLineEdit(reschedule);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(210, 70, 113, 28));
-        lineEdit_2 = new QLineEdit(reschedule);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(210, 110, 113, 28));
-        label_3 = new QLabel(reschedule);
+        label_2->setGeometry(QRect(200, 190, 91, 20));
+        label_3 = new QLabel(Reschedule);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(80, 190, 381, 20));
-        pushButton = new QPushButton(reschedule);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(230, 150, 83, 29));
-        dateTimeEdit = new QDateTimeEdit(reschedule);
+        label_3->setGeometry(QRect(200, 330, 111, 20));
+        textLabel = new QLabel(Reschedule);
+        textLabel->setObjectName("textLabel");
+        textLabel->setGeometry(QRect(210, 460, 401, 20));
+        lineEdit = new QLineEdit(Reschedule);
+        lineEdit->setObjectName("lineEdit");
+        lineEdit->setGeometry(QRect(350, 120, 113, 28));
+        lineEdit_2 = new QLineEdit(Reschedule);
+        lineEdit_2->setObjectName("lineEdit_2");
+        lineEdit_2->setGeometry(QRect(350, 180, 113, 28));
+        dateTimeEdit = new QDateTimeEdit(Reschedule);
         dateTimeEdit->setObjectName("dateTimeEdit");
-        dateTimeEdit->setGeometry(QRect(210, 230, 194, 29));
-        label_4 = new QLabel(reschedule);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(32, 240, 141, 20));
+        dateTimeEdit->setGeometry(QRect(330, 330, 194, 29));
+        btnSave = new QPushButton(Reschedule);
+        btnSave->setObjectName("btnSave");
+        btnSave->setGeometry(QRect(360, 400, 83, 29));
+        btnSearch = new QPushButton(Reschedule);
+        btnSearch->setObjectName("btnSearch");
+        btnSearch->setGeometry(QRect(360, 230, 83, 29));
+        textLabel_2 = new QLabel(Reschedule);
+        textLabel_2->setObjectName("textLabel_2");
+        textLabel_2->setGeometry(QRect(230, 280, 401, 21));
 
-        retranslateUi(reschedule);
+        retranslateUi(Reschedule);
 
-        QMetaObject::connectSlotsByName(reschedule);
+        QMetaObject::connectSlotsByName(Reschedule);
     } // setupUi
 
-    void retranslateUi(QDialog *reschedule)
+    void retranslateUi(QDialog *Reschedule)
     {
-        reschedule->setWindowTitle(QCoreApplication::translate("reschedule", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("reschedule", "Token No.", nullptr));
-        label_2->setText(QCoreApplication::translate("reschedule", "Contact No.", nullptr));
-        label_3->setText(QCoreApplication::translate("reschedule", "TextLabel", nullptr));
-        pushButton->setText(QCoreApplication::translate("reschedule", "Search", nullptr));
-        label_4->setText(QCoreApplication::translate("reschedule", "Enter new time/date", nullptr));
+        Reschedule->setWindowTitle(QCoreApplication::translate("Reschedule", "Dialog", nullptr));
+        label->setText(QCoreApplication::translate("Reschedule", "Enter TokenNo", nullptr));
+        label_2->setText(QCoreApplication::translate("Reschedule", "Enter Contact", nullptr));
+        label_3->setText(QCoreApplication::translate("Reschedule", "New Date/Time", nullptr));
+        textLabel->setText(QString());
+        btnSave->setText(QCoreApplication::translate("Reschedule", "Reschedule", nullptr));
+        btnSearch->setText(QCoreApplication::translate("Reschedule", "Search", nullptr));
+        textLabel_2->setText(QString());
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class reschedule: public Ui_reschedule {};
+    class Reschedule: public Ui_Reschedule {};
 } // namespace Ui
 
 QT_END_NAMESPACE

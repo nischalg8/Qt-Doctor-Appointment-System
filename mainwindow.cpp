@@ -40,3 +40,8 @@ void MainWindow::on_btnRecords_clicked()
     ptrRecords->populateData();
     ptrRecords->show();
 }
+void MainWindow::on_btnReschedule_clicked()
+{
+    ptrReschedule = new Reschedule(this);
+    ptrReschedule->show();
+}

@@ -39,7 +39,7 @@ public:
         Records->resize(880, 541);
         tableView = new QTableView(Records);
         tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(100, 210, 671, 231));
+        tableView->setGeometry(QRect(30, 210, 821, 231));
         lblinfo = new QLabel(Records);
         lblinfo->setObjectName("lblinfo");
         lblinfo->setGeometry(QRect(240, 460, 361, 20));

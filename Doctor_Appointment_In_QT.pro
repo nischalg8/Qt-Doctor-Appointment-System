@@ -30,20 +30,23 @@ SOURCES += \
     booking.cpp \
     cancellation.cpp \
     records.cpp \
-    mydb.cpp
+    mydb.cpp \
+    reschedule.cpp
 
 HEADERS += \
      mainwindow.h \
     booking.h \
     cancellation.h \
     records.h \
-    mydb.h
+    mydb.h \
+    reschedule.h
 
 FORMS += \
      mainwindow.ui \
     booking.ui \
     cancellation.ui \
-    records.ui
+    records.ui \
+    reschedule.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

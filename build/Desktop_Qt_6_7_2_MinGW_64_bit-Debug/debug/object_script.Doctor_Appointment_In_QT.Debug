@@ -4,7 +4,9 @@ debug/booking.o
 debug/cancellation.o
 debug/records.o
 debug/mydb.o
+debug/reschedule.o
 debug/moc_mainwindow.o
 debug/moc_booking.o
 debug/moc_cancellation.o
 debug/moc_records.o
+debug/moc_reschedule.o
