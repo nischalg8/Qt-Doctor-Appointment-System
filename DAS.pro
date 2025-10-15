@@ -49,7 +49,7 @@ FORMS += \
     reschedule.ui
 
 # Specify the directory for the output executable
-DESTDIR = $$OUT_PWD/../Doctor_Appointment_In_Qt/build
+DESTDIR = $$OUT_PWD/../Qt-Doctor-Appointment-System/build
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
