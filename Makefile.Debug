@@ -76,7 +76,7 @@ OBJECTS       = debug/main.o \
 		debug/moc_records.o \
 		debug/moc_reschedule.o
 
-DIST          =  mainwindow.h \
+DIST          = README.md mainwindow.h \
 		booking.h \
 		cancellation.h \
 		records.h \

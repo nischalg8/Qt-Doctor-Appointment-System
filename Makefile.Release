@@ -76,7 +76,7 @@ OBJECTS       = release/main.o \
 		release/moc_records.o \
 		release/moc_reschedule.o
 
-DIST          =  mainwindow.h \
+DIST          = README.md mainwindow.h \
 		booking.h \
 		cancellation.h \
 		records.h \
