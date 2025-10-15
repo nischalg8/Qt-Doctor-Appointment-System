@@ -44,8 +44,11 @@ object_script.*.Debug
 /.qmake.stash
 *.pro.user
 DAS.pro.user
+<<<<<<< HEAD
 Doctor_Appointment_In_QT.pro.user*
 
+=======
+>>>>>>> 57caae169ffcd8d3550de1da9d8c2b706fe42635
 *.pro.user.*
 *.qbs.user
 *.qbs.user.*
