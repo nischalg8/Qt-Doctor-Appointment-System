@@ -13,7 +13,7 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_DEPRECATED_WARNINGS -DPROJECT=\"C:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt\" -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
+DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_DEPRECATED_WARNINGS -DPROJECT=\"C:/Users/LOQ/Documents/Qt-Doctor-Appointment-System\" -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
 INCPATH       = -I. -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -Idebug -I. -I/include -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ 
@@ -89,16 +89,16 @@ DIST          =  mainwindow.h \
 		mydb.cpp \
 		reschedule.cpp
 QMAKE_TARGET  = DAS
-DESTDIR        = build\ #avoid trailing-slash linebreak
+DESTDIR        = ..\Doctor_Appointment_In_Qt\build\ #avoid trailing-slash linebreak
 TARGET         = DAS.exe
-DESTDIR_TARGET = build\DAS.exe
+DESTDIR_TARGET = ..\Doctor_Appointment_In_Qt\build\DAS.exe
 
 ####### Build rules
 
 first: all
-all: Makefile.Debug  build/DAS.exe
+all: Makefile.Debug  ../Doctor_Appointment_In_Qt/build/DAS.exe
 
-build/DAS.exe: D:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a D:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a D:/Qt/6.7.2/mingw_64/lib/libQt6Sql.a D:/Qt/6.7.2/mingw_64/lib/libQt6Core.a D:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a ui_mainwindow.h ui_booking.h ui_cancellation.h ui_records.h ui_reschedule.h $(OBJECTS) 
+../Doctor_Appointment_In_Qt/build/DAS.exe: D:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a D:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a D:/Qt/6.7.2/mingw_64/lib/libQt6Sql.a D:/Qt/6.7.2/mingw_64/lib/libQt6Core.a D:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a ui_mainwindow.h ui_booking.h ui_cancellation.h ui_records.h ui_reschedule.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) @debug\object_script.DAS.Debug $(LIBS)
 
 qmake: FORCE
@@ -385,7 +385,7 @@ debug/moc_mainwindow.cpp: mainwindow.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
 		debug/moc_predefs.h \
 		D:/Qt/6.7.2/mingw_64/bin/moc.exe
-	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include mainwindow.h -o debug\moc_mainwindow.cpp
+	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Documents/Qt-Doctor-Appointment-System/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Documents/Qt-Doctor-Appointment-System -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_booking.cpp: booking.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
@@ -594,7 +594,7 @@ debug/moc_booking.cpp: booking.h \
 		D:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
 		debug/moc_predefs.h \
 		D:/Qt/6.7.2/mingw_64/bin/moc.exe
-	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include booking.h -o debug\moc_booking.cpp
+	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Documents/Qt-Doctor-Appointment-System/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Documents/Qt-Doctor-Appointment-System -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include booking.h -o debug\moc_booking.cpp
 
 debug/moc_cancellation.cpp: cancellation.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
@@ -800,7 +800,7 @@ debug/moc_cancellation.cpp: cancellation.h \
 		D:/Qt/6.7.2/mingw_64/include/QtSql/qsqlerror.h \
 		debug/moc_predefs.h \
 		D:/Qt/6.7.2/mingw_64/bin/moc.exe
-	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include cancellation.h -o debug\moc_cancellation.cpp
+	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Documents/Qt-Doctor-Appointment-System/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Documents/Qt-Doctor-Appointment-System -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include cancellation.h -o debug\moc_cancellation.cpp
 
 debug/moc_records.cpp: records.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
@@ -1009,7 +1009,7 @@ debug/moc_records.cpp: records.h \
 		D:/Qt/6.7.2/mingw_64/include/QtSql/qsqlerror.h \
 		debug/moc_predefs.h \
 		D:/Qt/6.7.2/mingw_64/bin/moc.exe
-	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include records.h -o debug\moc_records.cpp
+	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Documents/Qt-Doctor-Appointment-System/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Documents/Qt-Doctor-Appointment-System -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include records.h -o debug\moc_records.cpp
 
 debug/moc_reschedule.cpp: reschedule.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
@@ -1241,7 +1241,7 @@ debug/moc_reschedule.cpp: reschedule.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
 		debug/moc_predefs.h \
 		D:/Qt/6.7.2/mingw_64/bin/moc.exe
-	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Desktop/Doctor_Appointment_In_Qt/Doctor_Appointment_In_Qt -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include reschedule.h -o debug\moc_reschedule.cpp
+	D:\Qt\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/LOQ/Documents/Qt-Doctor-Appointment-System/debug/moc_predefs.h -ID:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -IC:/Users/LOQ/Documents/Qt-Doctor-Appointment-System -ID:/Qt/6.7.2/mingw_64/include -ID:/Qt/6.7.2/mingw_64/include/QtWidgets -ID:/Qt/6.7.2/mingw_64/include/QtGui -ID:/Qt/6.7.2/mingw_64/include/QtSql -ID:/Qt/6.7.2/mingw_64/include/QtCore -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include reschedule.h -o debug\moc_reschedule.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -2009,7 +2009,8 @@ debug/booking.o: booking.cpp booking.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qpushbutton.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
 		D:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
-		D:/Qt/6.7.2/mingw_64/include/QtCore/qrandom.h
+		D:/Qt/6.7.2/mingw_64/include/QtCore/qrandom.h \
+		D:/Qt/6.7.2/mingw_64/include/QtCore/QRegularExpression
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\booking.o booking.cpp
 
 debug/cancellation.o: cancellation.cpp cancellation.h \
@@ -2834,7 +2835,8 @@ debug/reschedule.o: reschedule.cpp reschedule.h \
 		D:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/QPushButton \
 		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qpushbutton.h \
-		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h
+		D:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		D:/Qt/6.7.2/mingw_64/include/QtCore/QRegularExpression
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\reschedule.o reschedule.cpp
 
 debug/qrc_image.o: debug/qrc_image.cpp 
